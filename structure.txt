@@ -1,0 +1,22 @@
+SmartHub/
+├── Main.java
+├── ui/
+│   ├── ConsoleUI.java
+│   └── AsciiArt.java
+├── utils/
+│   └── Animation.java
+├── models/
+│   ├── User.java
+│   └── Booking.java
+└── services/
+    ├── AuthService.java
+    ├── PaymentService.java
+    ├── TransportService.java
+    ├── StayService.java
+    ├── RentalService.java
+    ├── Bookable.java
+    └── payment/
+        ├── PaymentMethod.java
+        ├── UpiPayment.java
+        ├── CardPayment.java
+        └── NetBankingPayment.java
