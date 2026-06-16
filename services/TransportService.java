@@ -1,4 +1,5 @@
 package services;
+import utils.Session;
 
 import java.util.Scanner;
 import ui.ConsoleUI;
@@ -149,6 +150,7 @@ public class TransportService {
             "  └──➤ " + ConsoleUI.RESET
         );
         String fromCode = sc.nextLine().trim().toUpperCase();
+        Session.keepAlive();
 
         // ── Destination station ───────────────────────────────────────────────
         System.out.print(
@@ -158,6 +160,7 @@ public class TransportService {
             "  └──➤ " + ConsoleUI.RESET
         );
         String toCode = sc.nextLine().trim().toUpperCase();
+        Session.keepAlive();
 
         // ── Same station check ────────────────────────────────────────────────
         //
@@ -272,6 +275,7 @@ public class TransportService {
             "  └──➤ " + ConsoleUI.RESET
         );
         String confirm = sc.nextLine();
+        Session.keepAlive();
 
         if (confirm.equalsIgnoreCase("yes")) {
 
@@ -441,6 +445,7 @@ public class TransportService {
             "  └──➤ " + ConsoleUI.RESET
         );
         String confirm = sc.nextLine();
+        Session.keepAlive();
 
         if (confirm.equalsIgnoreCase("yes")) {
 
@@ -537,6 +542,7 @@ public class TransportService {
     // ================= LOCAL HELPERS =================
 
     private static int getInt() {
+        Session.keepAlive();
         try {
             return Integer.parseInt(sc.nextLine());
         } catch (Exception e) {

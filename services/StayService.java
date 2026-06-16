@@ -1,4 +1,5 @@
 package services;
+import utils.Session;
 
 import ui.ConsoleUI;
 import utils.Animation;
@@ -56,6 +57,7 @@ public class StayService {
         for (int i = 0; i < members; i++) {
             System.out.print("\n" + ConsoleUI.BRIGHT_YELLOW + ConsoleUI.BOLD + "  ┌─ Member " + (i + 1) + " Name" + ConsoleUI.RESET + "\n" + ConsoleUI.BRIGHT_YELLOW + ConsoleUI.BOLD + "  └──➤ " + ConsoleUI.RESET);
             memberNames[i] = sc.nextLine().trim();
+        Session.keepAlive();
         }
         
         int days;
@@ -95,6 +97,7 @@ public class StayService {
         
         System.out.print("\n" + ConsoleUI.BRIGHT_YELLOW + ConsoleUI.BOLD + "  ┌─ Confirm Booking? (yes/no)" + ConsoleUI.RESET + "\n" + ConsoleUI.BRIGHT_YELLOW + ConsoleUI.BOLD + "  └──➤ " + ConsoleUI.RESET);
         String confirm = sc.nextLine();
+        Session.keepAlive();
         
         if (confirm.equalsIgnoreCase("yes")) {
             Animation.hotelLoading();
@@ -116,8 +119,9 @@ public class StayService {
         }
     }
 
-    private static int getInt() { 
-        try { 
+    private static int getInt() {
+        Session.keepAlive();
+        try {
             return Integer.parseInt(new java.util.Scanner(System.in).nextLine()); 
         } 
         catch (Exception e) { 

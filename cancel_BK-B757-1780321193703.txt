@@ -1,0 +1,15 @@
+============================================================
+        SMARTHUB CANCELLATION RECEIPT
+============================================================
+
+  Booking ID  : BK-B757-1780321193703
+  Customer    : Rachel
+  Service     : Car Rental
+  Details     : 🚘 Hatchback for 4 hours
+  Amount      : Rs. 2360
+  Booked At   : 01-06-2026 07:09 pm
+  Cancelled At: 02-06-2026 08:29 am
+
+  Refund of Rs. 2360 will be processed in 5-7 business days.
+
+============================================================

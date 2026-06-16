@@ -1,0 +1,32 @@
+============================================================
+        SMARTHUB CANCELLATION RECEIPT
+============================================================
+
+  Booking ID  : BK-6D72-1780162212439
+  Customer    : Rachel
+  Service     : Cab
+  Details     : Punjagutta to Jubilee Hills - 1 people
+  Amount      : Rs. 136
+  Booked At   : 30-05-2026 11:00 pm
+  Cancelled At: 30-05-2026 11:02 pm
+
+  Refund of Rs. 136 will be processed in 5-7 business days.
+
+============================================================
+
+============================================================
+        SMARTHUB CANCELLATION RECEIPT
+============================================================
+
+  Booking ID  : BK-8E49-1780162407700
+  Customer    : poiu
+  Service     : Bike Rental
+  Details     : 🏍 Sports Bike for 6 hours
+  Amount      : Rs. 1062
+  Booked At   : 30-05-2026 11:03 pm
+  Cancelled At: 30-05-2026 11:03 pm
+
+  Refund of Rs. 1062 will be processed in 5-7 business days.
+
+============================================================
+

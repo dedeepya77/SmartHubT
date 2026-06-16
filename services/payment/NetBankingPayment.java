@@ -13,7 +13,7 @@ public class NetBankingPayment extends PaymentMethod {
     }
 
     @Override
-    public void collectDetails() {
+    public boolean collectDetails() {
         ConsoleUI.clear();
         ConsoleUI.doubleLine();
         ConsoleUI.title("🏦 NET BANKING");
@@ -30,48 +30,55 @@ public class NetBankingPayment extends PaymentMethod {
         System.out.println();
         System.out.println(ConsoleUI.center(ConsoleUI.BRIGHT_GREEN + "[5]  Kotak Mahindra Bank"));
         System.out.println();
+        System.out.println(ConsoleUI.center(ConsoleUI.BRIGHT_RED   + "[0]  ← Back"));
+        System.out.println();
         ConsoleUI.line();
 
-        System.out.print("\n" + ConsoleUI.BRIGHT_YELLOW + ConsoleUI.BOLD + "  ┌─ Select Bank" + ConsoleUI.RESET + "\n" + ConsoleUI.BRIGHT_YELLOW + ConsoleUI.BOLD + "  └──➤ " + ConsoleUI.RESET);
-        int bankChoice;
-        try { 
-            bankChoice = Integer.parseInt(sc.nextLine()); 
-        } catch (Exception e) { 
-            bankChoice = -1; 
+        // ── Bank selection — loop until valid or back ─────────────────────────
+        while (true) {
+            System.out.print("\n" + ConsoleUI.BRIGHT_YELLOW + ConsoleUI.BOLD
+                + "  ┌─ Select Bank" + ConsoleUI.RESET
+                + "\n" + ConsoleUI.BRIGHT_YELLOW + ConsoleUI.BOLD
+                + "  └──➤ " + ConsoleUI.RESET);
+            int choice;
+            try {
+                choice = Integer.parseInt(sc.nextLine());
+            } catch (Exception e) {
+                choice = -1;
+            }
+
+            if (choice == 0) return false;
+            switch (choice) {
+                case 1: bankName = "State Bank of India"; break;
+                case 2: bankName = "HDFC Bank";           break;
+                case 3: bankName = "ICICI Bank";          break;
+                case 4: bankName = "Axis Bank";           break;
+                case 5: bankName = "Kotak Mahindra Bank"; break;
+                default:
+                    ConsoleUI.error("Invalid choice! Enter 1–5 to select a bank, or 0 to go back.");
+                    continue;
+            }
+            break;
         }
 
-        switch (bankChoice) {
-            case 1: bankName = "State Bank of India"; break;
-            case 2: bankName = "HDFC Bank"; break;
-            case 3: bankName = "ICICI Bank"; break;
-            case 4: bankName = "Axis Bank"; break;
-            case 5: bankName = "Kotak Mahindra Bank"; break;
-            default:
-                ConsoleUI.error("Invalid Bank Selection!");
-                ConsoleUI.pause();
-                return;
-        }
-
-        System.out.print("\n" + ConsoleUI.BRIGHT_YELLOW + ConsoleUI.BOLD + "  ┌─ Customer ID / Username" + ConsoleUI.RESET + "\n" + ConsoleUI.BRIGHT_YELLOW + ConsoleUI.BOLD + "  └──➤ " + ConsoleUI.RESET);
+        System.out.print("\n" + ConsoleUI.BRIGHT_YELLOW + ConsoleUI.BOLD
+            + "  ┌─ Customer ID / Username" + ConsoleUI.RESET
+            + "\n" + ConsoleUI.BRIGHT_YELLOW + ConsoleUI.BOLD
+            + "  └──➤ " + ConsoleUI.RESET);
         customerId = sc.nextLine().trim();
 
         if (customerId.isEmpty()) {
             ConsoleUI.error("Customer ID cannot be empty!");
             ConsoleUI.pause();
-            return;
+            return false;
         }
 
         System.out.println();
-        System.out.println(ConsoleUI.center(ConsoleUI.BRIGHT_CYAN + "🔐 Connecting to " + ConsoleUI.BOLD + bankName + ConsoleUI.RESET));
+        System.out.println(ConsoleUI.center(ConsoleUI.BRIGHT_CYAN + "🔐 Connecting to "
+            + ConsoleUI.BOLD + bankName + ConsoleUI.RESET));
+        return true;
     }
 
-    @Override
-    public String getIdentifier() { 
-        return customerId; 
-    }
-
-    @Override
-    public String getMethodName() { 
-        return "Net Banking (" + bankName + ")"; 
-    }
+    @Override public String getIdentifier() { return customerId; }
+    @Override public String getMethodName() { return "Net Banking (" + bankName + ")"; }
 }

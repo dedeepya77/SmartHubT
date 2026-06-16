@@ -12,7 +12,7 @@ public class UpiPayment extends PaymentMethod {
     }
 
     @Override
-    public void collectDetails() {
+    public boolean collectDetails() {
         ConsoleUI.clear();
         ConsoleUI.doubleLine();
         ConsoleUI.title("📱 UPI PAYMENT");
@@ -23,27 +23,21 @@ public class UpiPayment extends PaymentMethod {
         System.out.println();
 
         while (true) {
-            System.out.print("\n" + ConsoleUI.BRIGHT_YELLOW + ConsoleUI.BOLD + "  ┌─ UPI ID" + ConsoleUI.RESET + "\n" + ConsoleUI.BRIGHT_YELLOW + ConsoleUI.BOLD + "  └──➤ " + ConsoleUI.RESET);
+            System.out.print("\n" + ConsoleUI.BRIGHT_YELLOW + ConsoleUI.BOLD
+                + "  ┌─ UPI ID" + ConsoleUI.RESET
+                + "\n" + ConsoleUI.BRIGHT_YELLOW + ConsoleUI.BOLD
+                + "  └──➤ " + ConsoleUI.RESET);
             upiId = sc.nextLine().trim();
-
-            if (!upiId.isEmpty() && upiId.contains("@")) {
-                break;
-            }
-
+            if (!upiId.isEmpty() && upiId.contains("@")) break;
             ConsoleUI.error("Invalid UPI ID! Must contain '@' (e.g. name@upi). Try again.");
         }
 
         System.out.println();
-        System.out.println(ConsoleUI.center(ConsoleUI.BRIGHT_CYAN + "📲 Sending ₹" + amount + " request to " + ConsoleUI.BOLD + upiId + ConsoleUI.RESET));
+        System.out.println(ConsoleUI.center(ConsoleUI.BRIGHT_CYAN + "📲 Sending ₹" + amount
+            + " request to " + ConsoleUI.BOLD + upiId + ConsoleUI.RESET));
+        return true;
     }
 
-    @Override
-    public String getIdentifier() { 
-        return upiId; 
-    }
-
-    @Override
-    public String getMethodName() { 
-        return "UPI"; 
-    }
+    @Override public String getIdentifier()  { return upiId; }
+    @Override public String getMethodName()  { return "UPI"; }
 }

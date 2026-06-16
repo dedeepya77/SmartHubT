@@ -1,0 +1,80 @@
+============================================================
+           SMARTHUB PAYMENT RECEIPT
+============================================================
+
+  Receipt ID  : RCPT-21E0-20260530
+  Customer    : Rachel
+  Method      : Credit Card
+  Identifier  : **** **** **** 4521
+  Amount Paid : Rs. 10620
+  Date & Time : 30-05-2026 11:07 pm
+
+------------------------------------------------------------
+  Thank you for choosing SmartHub!
+  Keep this receipt for your records.
+============================================================
+
+============================================================
+           SMARTHUB PAYMENT RECEIPT
+============================================================
+
+  Receipt ID  : RCPT-1984-20260530
+  Customer    : Pheobe
+  Method      : Net Banking (Axis Bank)
+  Identifier  : pheobe1254
+  Amount Paid : Rs. 6372
+  Date & Time : 30-05-2026 11:08 pm
+
+------------------------------------------------------------
+  Thank you for choosing SmartHub!
+  Keep this receipt for your records.
+============================================================
+
+============================================================
+           SMARTHUB PAYMENT RECEIPT
+============================================================
+
+  Receipt ID  : RCPT-F75-20260531
+  Customer    : Chandler
+  Method      : Credit Card
+  Identifier  : **** **** **** 9658
+  Amount Paid : Rs. 18880
+  Date & Time : 31-05-2026 11:22 am
+
+------------------------------------------------------------
+  Thank you for choosing SmartHub!
+  Keep this receipt for your records.
+============================================================
+
+============================================================
+           SMARTHUB PAYMENT RECEIPT
+============================================================
+
+  Receipt ID  : RCPT-C52E-20260531
+  Customer    : Chandler
+  Method      : Net Banking (ICICI Bank)
+  Identifier  : chandler1234
+  Amount Paid : Rs. 65
+  Date & Time : 31-05-2026 11:41 am
+
+------------------------------------------------------------
+  Thank you for choosing SmartHub!
+  Keep this receipt for your records.
+============================================================
+
+============================================================
+           SMARTHUB PAYMENT RECEIPT
+============================================================
+
+  Receipt ID  : RCPT-3914-20260601
+  Customer    : Rachel
+  Method      : Debit Card
+  Identifier  : **** **** **** 6589
+  Amount Paid : Rs. 2360
+  Date & Time : 01-06-2026 07:09 pm
+
+------------------------------------------------------------
+  Thank you for choosing SmartHub!
+  Keep this receipt for your records.
+============================================================
+

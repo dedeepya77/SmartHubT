@@ -1,4 +1,5 @@
 package services;
+import utils.Session;
 
 import ui.ConsoleUI;
 import utils.Animation;
@@ -137,8 +138,9 @@ public class RentalService {
         }
     }
 
-    private static int getInt() { 
-        try { 
+    private static int getInt() {
+        Session.keepAlive();
+        try {
             return Integer.parseInt(new java.util.Scanner(System.in).nextLine()); 
         } 
         catch (Exception e) { 
